@@ -2,18 +2,18 @@
 
 // 
 // ==================================================/
-// @import "vendor/andy";
-// @import "utils/helpers";
-// @import "base/reset";
-// @import "base/colors";
-// @import "vendor/normalize"; 
-// @import "base/fonts";
-// @import "components/buttons";
+@import "vendor/andy";
+@import "utils/helpers";
+@import "base/reset";
+@import "base/colors";
+@import "vendor/normalize"; 
+@import "base/fonts";
+@import "components/buttons";
 
-// @import "vendor/mq"; 
-// @import "layout/grid";
+@import "vendor/mq"; 
+@import "layout/grid";
 
-@import "test";
+// @import "test";
 
 // show the active breakpoint (_mq.scss)
 // ==================================================/
@@ -23,11 +23,11 @@
 // // ==================================================/
 // @include col-grid-border(#000);
 
-// // temp
-// body {
-//   @extend %system_normal--300;
-// }
+// temp
+body {
+  @extend %system_normal--300;
+}
 
-// .item-id {
-//   background-color: #ccc;
-// }
+.item-id {
+  background-color: #ccc;
+}

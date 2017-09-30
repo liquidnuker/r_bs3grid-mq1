@@ -1,9 +1,10 @@
 const path = require('path');
-const glob = require('glob-all');
 const webpack = require('webpack');
 const Promise = require('es6-promise').Promise;
 
+const glob = require('glob-all');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const PurifyCSSPlugin = require('purifycss-webpack');
 const extractCSS = new ExtractTextPlugin('../[name].bundle.css');
 
 module.exports = {
@@ -68,8 +69,8 @@ module.exports = {
     new PurifyCSSPlugin({
       // Give paths to parse for rules. These should be absolute!
       paths: glob.sync([
-        path.join(__dirname, '.html'),
-        // path.join(__dirname, 'partials/.php')
+        path.join(__dirname, '*.html'),
+        path.join(__dirname, 'src/vue-components/*.vue')
       ]),
     })
 
