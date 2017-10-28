@@ -23,7 +23,12 @@ module.exports = {
       // extractCSS
       {
         test: /\.scss$/,
-        loader: extractCSS.extract(['css-loader', 'sass-loader'])
+        loader: extractCSS.extract([
+          {
+            loader: 'css-loader',
+            // options: { minimize: true }
+          }, 
+          'sass-loader'])
       },
       // url loader
       {
@@ -53,7 +58,8 @@ module.exports = {
         path.join(__dirname, '*.html'),
         // path.join(__dirname, 'src/components/*.jsx')
       ]),
-    })
+      minimize: true
+    }),
   ],
   resolve: {
     modules: [
