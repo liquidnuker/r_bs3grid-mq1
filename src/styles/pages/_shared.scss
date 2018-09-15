@@ -2,6 +2,7 @@
 @include mq($from: mobile) {
   .container-fluid-custom {
     padding: 0px 2% 0 2%; /* trbl */
+    background-color: green;
   }
 }
 
